@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>home</li>
+        <li>pa1</li>
+        <li>pa2</li>
+    </ul>
+    {% block content-container %}
+    <h1>dddddddddddddddddddddddddddddddddddddddddddd</h1>
+{#    <h2>usernmae:{{ user_obj.username }}</h2>#}
+{#    <h2>name:{{ user_obj.name }}</h2>#}
+    <ul>
+        {% for i in user_obj %}
+{#            {% if i.username == '3alex' %}#}
+{#            {% if forloop.counter0 > 2 %}#}
+            {% if forloop.counter0|divisibleby:"2" %}
+            <li style="background-color: red">username:{{ i.username }},{{ i.name }}</li>
+            {% else %}
+            <li>username:{{ i.username }},{{ i.name }}</li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+    {% endblock %}
+<footer>
+    <p>000000000000000000000000000000000000000000000</p>
+</footer>
+
+</body>
+</html>
